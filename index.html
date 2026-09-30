@@ -1,0 +1,381 @@
+요청하신 사항을 반영하여 **부산 1박(12.13)을 포함한 3박 4일(12.13 ~ 12.16) 일정**으로 업데이트하고, **예산표에서 4인 총액 기준을 제외**하여 1인당 경비 중심으로 재구성하였습니다.
+
+아래에서 **업데이트된 주요 내용**을 확인하신 후, 모바일(카카오톡)에서 바로 열어볼 수 있는 **전용 HTML 웹페이지 코드**를 복사하여 사용해 보세요!
+
+---
+
+## 📌 주요 변경 및 추가 사항
+
+1. **전체 일정**: `2026.12.13(일) ~ 12.16(수)` (3박 4일)
+2. **12/13(일) 부산항 인근 1박 추가** (3인 투숙 / 1 더블베드 + 1 싱글베드 구성):
+* **크라운 하버 호텔 부산**: 부산항/부산역 차량 5분, 디럭스 패밀리 더블 (더블1 + 싱글1)
+* **아스티 호텔 부산**: 부산역 도보 1분, 부산항 여객터미널 도보 10~15분, 디럭스 패밀리 트윈
+* **더 포트 호텔 부산**: 부산항 국제여객터미널 바로 앞, 패밀리 트윈 (더블1 + 싱글1)
+
+
+3. **1인당 개략 예산표 (4인 총액 제외)**:
+* 부산 1박 숙박비 + 대마도 2박 숙박비 + 왕복 배편 + 렌터카/연료 + 반나절 낚시 + 3박 4일 식비/주류 + 온천/예비비 포함 **1인당 약 75만 ~ 78만 원선**
+
+
+
+---
+
+## 📱 카카오톡용 웹페이지 HTML 코드
+
+아래 코드 블록 전체를 복사하여 `index.html` 파일로 저장하신 뒤, 노션(Notion), 깃허브 페이지(GitHub Pages), 또는 웹 호스팅에 올리시면 카톡 인앱 브라우저에서 바로 열리는 모바일 맞춤 웹페이지가 됩니다.
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50세 기념 베프 대마도 여행 계획서 (3박 4일)</title>
+  <style>
+    :root {
+      --primary-color: #1b365d;
+      --secondary-color: #4a777a;
+      --accent-color: #e67e22;
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-main: #2d3748;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: #ffffff;
+      padding: 20px 16px;
+      border-radius: 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(27, 54, 93, 0.15);
+    }
+    header h1 { font-size: 1.35rem; font-weight: 700; margin-bottom: 6px; }
+    header p { font-size: 0.85rem; opacity: 0.9; }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+    .summary-box {
+      background-color: #f0f4f8;
+      border-left: 4px solid var(--primary-color);
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+    }
+    .summary-box ul { list-style: none; }
+    .summary-box li { margin-bottom: 4px; }
+    .summary-box li strong { color: var(--primary-color); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.83rem;
+      margin-top: 8px;
+    }
+    th, td {
+      padding: 8px 6px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+    th {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+    }
+    td.center { text-align: center; }
+    td.bold { font-weight: 600; }
+    tr:nth-child(even) td { background-color: #f8fafc; }
+
+    .hotel-item {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    .hotel-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .hotel-name { font-weight: 700; color: var(--primary-color); font-size: 0.92rem; }
+    .hotel-price { font-size: 0.8rem; color: var(--secondary-color); font-weight: 600; }
+    .hotel-desc { font-size: 0.82rem; color: var(--text-main); margin-top: 3px; }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .checklist { list-style: none; font-size: 0.85rem; }
+    .checklist li { margin-bottom: 6px; padding-left: 20px; relative; }
+    .checklist li::before { content: "✔"; position: absolute; left: 0; color: var(--secondary-color); font-weight: bold; }
+
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎉 50세 기념 베프 우정 여행</h1>
+    <p>부산항 출발 & 대마도 렌터카/낚시/숲길 3박 4일 일정표</p>
+  </header>
+
+  <!-- 1. 일정 개요 -->
+  <div class="card">
+    <div class="card-title">📌 여행 개요 요약</div>
+    <div class="summary-box">
+      <ul>
+        <li><strong>일정:</strong> 2026. 12. 13 (일) ~ 12. 16 (수) [3박 4일]</li>
+        <li><strong>동선:</strong> 부산 1박 + 대마도 2박 3일 (히타카츠/이즈하라)</li>
+        <li><strong>인원:</strong> 성인 3~4인 (차량 1대 분담)</li>
+        <li><strong>핵심 테마:</strong> 부산 전야제 + 렌터카 드라이브 + 아소만 선상 낚시 + 삼나무 숲길 & 석양</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2. 예산표 (1인당 기준) -->
+  <div class="card">
+    <div class="card-title">💰 1인당 예상 경비 보고</div>
+    <table>
+      <thead>
+        <tr>
+          <th>항목</th>
+          <th>세부 내역</th>
+          <th>1인당 금액</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bold">부산 숙박 (1박)</td>
+          <td>부산항 인근 패밀리트윈 (3인 분담)</td>
+          <td class="center">약 35,000원</td>
+        </tr>
+        <tr>
+          <td class="bold">왕복 배편</td>
+          <td>부산↔히타카츠 고속선 + 세금 포함</td>
+          <td class="center">약 160,000원</td>
+        </tr>
+        <tr>
+          <td class="bold">대마도 숙박 (2박)</td>
+          <td>3성급 호텔 (2인 1실/트윈 분담)</td>
+          <td class="center">약 130,000원</td>
+        </tr>
+        <tr>
+          <td class="bold">렌터카 & 연료</td>
+          <td>7~8인승 미니밴 48시간 + 보험/주유</td>
+          <td class="center">약 80,000원</td>
+        </tr>
+        <tr>
+          <td class="bold">선상 낚시</td>
+          <td>아소만 반나절 체험 (장비/선장)</td>
+          <td class="center">약 85,000원</td>
+        </tr>
+        <tr>
+          <td class="bold">식비 & 주류</td>
+          <td>3박 4일 식사 + 50세 축하 이자카야</td>
+          <td class="center">약 240,000원</td>
+        </tr>
+        <tr>
+          <td class="bold">온천 & 예비비</td>
+          <td>나기사 온천 + 음료 및 입장료</td>
+          <td class="center">약 45,000원</td>
+        </tr>
+        <tr style="background-color: #e2e8f0;">
+          <td class="bold" colspan="2">합계 (1인당 표준예산)</td>
+          <td class="center bold" style="color: var(--primary-color);">약 770,000원</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.75rem; color:var(--text-muted); margin-top:6px;">※ 개인 쇼핑비 및 현지 유류세 변동에 따라 차이가 있을 수 있습니다.</p>
+  </div>
+
+  <!-- 3. 부산 1박 숙소 (12/13) -->
+  <div class="card">
+    <div class="card-title">🏨 부산 1박 숙소 추천 (12/13, 3인 투숙)</div>
+    <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:10px;">조건: 부산항 인근, 3인 투숙 가능 (1더블베드 + 1싱글베드 패밀리 트윈)</p>
+
+    <div class="hotel-item">
+      <div class="hotel-name">1. 크라운 하버 호텔 부산 <span class="badge">추천</span></div>
+      <div class="hotel-price">객실 요금: 약 9만 ~ 11만 원 / 1박 (3인 기준)</div>
+      <div class="hotel-desc">• 위치: 부산 중구 중앙동 (부산항 여객터미널 차량 5분)</div>
+      <div class="hotel-desc">• 객실: 디럭스 패밀리 더블 (더블1 + 싱글1, 30㎡)</div>
+    </div>
+
+    <div class="hotel-item">
+      <div class="hotel-name">2. 아스티 호텔 부산</div>
+      <div class="hotel-price">객실 요금: 약 12만 ~ 15만 원 / 1박 (3인 기준)</div>
+      <div class="hotel-desc">• 위치: 부산역 도보 1분 (부산항 여객터미널 도보 10~15분)</div>
+      <div class="hotel-desc">• 객실: 디럭스 패밀리 트윈 (더블1 + 싱글1)</div>
+    </div>
+
+    <div class="hotel-item">
+      <div class="hotel-name">3. 더 포트 호텔 부산</div>
+      <div class="hotel-price">객실 요금: 약 8만 ~ 10만 원 / 1박 (3인 기준)</div>
+      <div class="hotel-desc">• 위치: 부산 동구 초량동 (부산항 국제여객터미널 바로 앞)</div>
+      <div class="hotel-desc">• 객실: 패밀리 트윈 (더블1 + 싱글1)</div>
+    </div>
+  </div>
+
+  <!-- 4. 대마도 3성급 호텔 -->
+  <div class="card">
+    <div class="card-title">🏝 대마도 추천 3성급 호텔 (12/14~12/16)</div>
+
+    <div class="hotel-item">
+      <div class="hotel-name">토요코인 쓰시마 (히타카츠/이즈하라)</div>
+      <div class="hotel-desc">• 가성비 최상, 정갈한 무료 조식, 시내 접근성 완벽.</div>
+    </div>
+
+    <div class="hotel-item">
+      <div class="hotel-name">대아호텔 (이즈하라)</div>
+      <div class="hotel-desc">• 오션뷰 전망, 넓은 대중탕보유, 완벽한 한국어 서비스.</div>
+    </div>
+
+    <div class="hotel-item">
+      <div class="hotel-name">쓰시마 그랜드 호텔 (미츠시마)</div>
+      <div class="hotel-desc">• 아소만 해안가 위치, 바다가 보이는 온천 및 카이세키 석식.</div>
+    </div>
+  </div>
+
+  <!-- 5. 3박 4일 상세 일정표 -->
+  <div class="card">
+    <div class="card-title">📅 3박 4일 상세 일정표</div>
+    <table>
+      <thead>
+        <tr>
+          <th>일자</th>
+          <th>시간</th>
+          <th>주요 일정 & 동선</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 1일차 -->
+        <tr>
+          <td class="bold center" rowspan="3">12/13<br>(일)</td>
+          <td class="center">15:00~</td>
+          <td>부산 도착 & 부산항 인근 숙소 체크인</td>
+        </tr>
+        <tr>
+          <td class="center">17:00~19:00</td>
+          <td>부산역/남포동 산책 & 저녁 (돼지국밥 또는 해산물)</td>
+        </tr>
+        <tr>
+          <td class="center">19:30~21:30</td>
+          <td>초량 불백거리 / 중앙동 분위기 있는 카페 & 전야제</td>
+        </tr>
+
+        <!-- 2일차 -->
+        <tr>
+          <td class="bold center" rowspan="4">12/14<br>(월)</td>
+          <td class="center">07:30~09:00</td>
+          <td>부산항 국제여객터미널 수속 & 출항 (히타카츠 행)</td>
+        </tr>
+        <tr>
+          <td class="center">10:30~12:30</td>
+          <td>히타카츠 입국 → 렌터카 수령 → 점심 (미나토 식당)</td>
+        </tr>
+        <tr>
+          <td class="center">13:00~16:30</td>
+          <td>슈시 삼나무 숲길 산책 → 미우다 해변 & 나기사 온천</td>
+        </tr>
+        <tr>
+          <td class="center">17:00~20:00</td>
+          <td>에보시다케 전망대 (아소만 석양) → 이즈하라 저녁</td>
+        </tr>
+
+        <!-- 3일차 -->
+        <tr>
+          <td class="bold center" rowspan="4">12/15<br>(화)</td>
+          <td class="center">09:00~13:00</td>
+          <td>🎣 **아소만 반나절 선상 낚시 체험** (3~4시간)</td>
+        </tr>
+        <tr>
+          <td class="center">13:00~14:30</td>
+          <td>점심 식사 (잡은 생선 회/매운탕 또는 전통 로쿠베)</td>
+        </tr>
+        <tr>
+          <td class="center">15:00~17:00</td>
+          <td>카미자카 전망대 & 이즈하라 역사 탐방 (덕혜옹주비)</td>
+        </tr>
+        <tr>
+          <td class="center">18:00~21:00</td>
+          <td>🎂 **50세 기념 베프 축하 파티** (해산물 BBQ/사케)</td>
+        </tr>
+
+        <!-- 4일차 -->
+        <tr>
+          <td class="bold center" rowspan="3">12/16<br>(수)</td>
+          <td class="center">08:30~11:30</td>
+          <td>만제키바시 산책 → 한국전망대 → 밸류마트 쇼핑</td>
+        </tr>
+        <tr>
+          <td class="center">12:00~13:30</td>
+          <td>히타카츠 점심 → 렌터카 기름 완탕 후 반납</td>
+        </tr>
+        <tr>
+          <td class="center">14:00~16:00</td>
+          <td>히타카츠항 수속 & 부산 귀국 (여행 종료)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 6. 체크리스트 -->
+  <div class="card">
+    <div class="card-title">✅ 베프 여행 준비물 체크리스트</div>
+    <ul class="checklist">
+      <li>여권 만료일 확인 (최소 3개월 이상 남아있을 것)</li>
+      <li>종이 국제운전면허증 + 한국 면허증 + 여권 (운전자 필수)</li>
+      <li>엔화 현금 넉넉히 준비 (현지 카드 불가 매장 다수)</li>
+      <li>선상 낚시용 멀미약 준비 (출항 30분 전 복용)</li>
+      <li>돼지코 변환젠더(110V) & 렌터카용 휴대폰 거치대/충전기</li>
+      <li>해외 여행자보험 가입</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>50세 기념 친구들과의 멋진 대마도 여행을 응원합니다! ❤️</p>
+  </footer>
+
+</body>
+</html>
+
+```
+
+---
+
+필요하신 추가 변경 사항이나 문의사항이 있으시면 언제든 편하게 말씀해 주세요!
